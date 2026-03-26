@@ -3,11 +3,12 @@ import { useEffect, useState } from 'react'
 const navItems = [
   { id: 'home', label: 'Home' },
   { id: 'skills', label: 'Skills' },
+  { id: 'research', label: 'Research' },
   { id: 'projects', label: 'Projects' },
   { id: 'experience', label: 'Timeline' },
 ]
 
-function Navbar() {
+function Navbar({ viewMode, onViewModeChange }) {
   const [activeSection, setActiveSection] = useState('home')
 
   useEffect(() => {
@@ -37,7 +38,7 @@ function Navbar() {
 
   return (
     <header className="sticky top-0 z-30 border-b border-cyan-500/10 bg-[#060912]/70 px-4 py-3 backdrop-blur-md sm:px-8">
-      <nav className="mx-auto flex w-full max-w-6xl items-center justify-between">
+      <nav className="mx-auto flex w-full max-w-6xl items-center justify-between gap-3">
         <a href="#home" className="text-sm font-semibold tracking-[0.18em] text-cyan-300 uppercase">
           Dulara
         </a>
@@ -55,6 +56,26 @@ function Navbar() {
             </li>
           ))}
         </ul>
+        <div className="hidden items-center gap-1 rounded-full border border-slate-700 bg-slate-900/70 p-1 text-xs sm:flex">
+          <button
+            type="button"
+            onClick={() => onViewModeChange('research')}
+            className={`rounded-full px-3 py-1.5 transition ${
+              viewMode === 'research' ? 'bg-cyan-400/20 text-cyan-200' : 'text-slate-300'
+            }`}
+          >
+            Research
+          </button>
+          <button
+            type="button"
+            onClick={() => onViewModeChange('recruiter')}
+            className={`rounded-full px-3 py-1.5 transition ${
+              viewMode === 'recruiter' ? 'bg-cyan-400/20 text-cyan-200' : 'text-slate-300'
+            }`}
+          >
+            Recruiter
+          </button>
+        </div>
       </nav>
     </header>
   )

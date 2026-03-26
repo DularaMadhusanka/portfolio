@@ -21,6 +21,10 @@ body,
   min-height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background:
     radial-gradient(circle at 22% 5%, rgba(34, 211, 238, 0.14), transparent 30%),

@@ -35,7 +35,7 @@ const projects = [
   },
 ]
 
-function Projects() {
+function Projects({ viewMode }) {
   return (
     <section id="projects" className="px-6 py-20 sm:px-10 lg:px-16">
       <motion.div
@@ -60,7 +60,7 @@ function Projects() {
               <h3 className="mb-2 text-lg font-semibold text-slate-100">{project.title}</h3>
               <p className="mb-4 text-sm leading-relaxed text-slate-300">{project.description}</p>
               <ul className="mb-4 space-y-2 text-sm text-slate-300">
-                {project.highlights.map((item) => (
+                {(viewMode === 'recruiter' ? project.highlights.slice(0, 2) : project.highlights).map((item) => (
                   <li key={item}>- {item}</li>
                 ))}
               </ul>
