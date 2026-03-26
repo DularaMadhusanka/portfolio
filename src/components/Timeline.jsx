@@ -5,18 +5,29 @@ const timelineItems = [
   {
     type: 'experience',
     icon: BriefcaseBusiness,
-    title: 'AI Systems Research Assistant',
+    title: 'Undergraduate Research Assistant - AI Systems Research',
     subtitle: 'SLIIT',
     period: 'Nov 2025 - Present',
-    description: 'Focused on Graph Neural Networks, deterministic experiment tracking, and reproducible ML pipelines.',
+    description:
+      'Built GNN training pipelines for spatio-temporal modeling, designed curriculum learning strategies, and improved GPU utilization with reproducible ML workflows.',
+  },
+  {
+    type: 'experience',
+    icon: BriefcaseBusiness,
+    title: 'Independent Mathematics Instructor',
+    subtitle: 'Freelance',
+    period: 'Mar 2025 - Present',
+    description:
+      'Taught probability and discrete mathematics to 900+ students, strengthening algorithmic thinking and quantitative problem-solving foundations.',
   },
   {
     type: 'education',
     icon: GraduationCap,
     title: 'BSc (Hons) IT - Data Science',
     subtitle: 'SLIIT',
-    period: 'GPA: 3.6 / 4.0',
-    description: 'Quantitative data science training centered around advanced mathematics, ML systems, and statistical inference.',
+    period: '2024 - 2028 · GPA: 3.6 / 4.0',
+    description:
+      'Undergraduate program focused on machine learning, quantitative modeling, backend systems, and production-oriented AI engineering.',
   },
 ]
 

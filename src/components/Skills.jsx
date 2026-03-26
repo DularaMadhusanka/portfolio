@@ -3,24 +3,24 @@ import { BrainCircuit, Code2, Cpu, Sigma } from 'lucide-react'
 
 const skillGroups = [
   {
-    title: 'ML Systems & AI Infra',
+    title: 'Systems & AI Infra',
     icon: Cpu,
-    skills: ['GPU-efficient training loops', 'Cloud deployment patterns', 'MLOps reproducibility', 'Pipeline optimization'],
+    skills: ['Training pipelines', 'GPU optimization', 'FastAPI', 'Streamlit', 'LangGraph', 'LangChain', 'ChromaDB'],
   },
   {
     title: 'ML & Deep Learning',
     icon: BrainCircuit,
-    skills: ['PyTorch', 'Graph Neural Networks', 'RAG-enabled workflows', 'Curriculum learning'],
+    skills: ['PyTorch', 'TensorFlow', 'CNNs', 'GNNs', 'Curriculum learning', 'RAG'],
   },
   {
     title: 'Mathematics & Quant',
     icon: Sigma,
-    skills: ['Monte Carlo simulations', "Student's t-distribution", 'Stochastic risk modeling', 'Heavy-tail analytics'],
+    skills: ['Monte Carlo simulation', 'Probability', 'Linear algebra', 'VaR/CVaR'],
   },
   {
     title: 'Languages & Tools',
     icon: Code2,
-    skills: ['Python', 'FastAPI', 'LangGraph', 'Tiingo API', 'GitHub Actions'],
+    skills: ['Python', 'SQL', 'Java', 'Git', 'Linux', 'Docker (basic)', 'MongoDB'],
   },
 ]
 

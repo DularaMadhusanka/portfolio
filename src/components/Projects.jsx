@@ -3,24 +3,35 @@ import { ArrowUpRight, Sparkles } from 'lucide-react'
 
 const projects = [
   {
-    title: 'Quantitative Risk Terminal & Monte Carlo Engine',
-    highlights: ["Student's t-distribution", 'Fat-tail risk estimation', 'Tiingo API ingestion', 'OOM prevention on 512MB RAM'],
+    title: 'Monte Carlo Risk Engine (Deployed)',
+    highlights: [
+      'Cloud-based simulator for VaR/CVaR',
+      "Student's t-distribution for fat-tail markets",
+      '10K+ simulations on constrained 512MB Render instance',
+      'External API-powered data pipeline',
+    ],
     description:
-      'Built a robust risk surface explorer for heavy-tailed markets with resource-aware simulation controls that stay stable under constrained memory.',
+      'Built a production-focused stochastic risk system using Monte Carlo methods to model heavy-tail behavior and deliver reliable portfolio risk metrics.',
     link: 'https://monte-carlo-risk-engine.streamlit.app/',
     featured: true,
   },
   {
-    title: 'Entropy-Driven Curriculum Training Pipeline',
-    highlights: ['PyTorch orchestration', 'GPU-bound optimization loops', '+39% F1 performance uplift'],
+    title: 'Entropy-Based Curriculum Training Pipeline',
+    highlights: ['GPU-based entropy difficulty scoring', 'Fully GPU-bound training loop', '+2.84% accuracy', '+39% F1 uplift'],
     description:
-      'Designed staged-sample scheduling based on entropy signals to accelerate convergence and increase model generalization.',
+      'Implemented entropy-driven feature masking to prioritize harder concepts first and improve fine-grained classification stability on small datasets.',
   },
   {
-    title: 'Multi-Agent Conversational AI Platform',
-    highlights: ['LangGraph orchestration', 'RAG retrieval layers', 'FastAPI backend'],
+    title: 'RAG-Based Hotel Booking Assistant',
+    highlights: ['Vector database retrieval stack', 'Context-aware LLM responses', 'Modular FastAPI backend'],
     description:
-      'Engineered a modular multi-agent runtime where retrieval reasoning and response synthesis run as composable graph states.',
+      'Designed a retrieval-augmented booking assistant that combines semantic search and LLM generation for grounded, domain-specific hotel recommendations.',
+  },
+  {
+    title: 'Real-Time ASL Recognition System',
+    highlights: ['MobileNetV2 architecture', 'TensorFlow pipeline', '85% classification accuracy'],
+    description:
+      'Developed and optimized a real-time vision inference system for American Sign Language recognition with stable interactive performance.',
   },
 ]
 

@@ -50,7 +50,7 @@ function Hero() {
         </div>
 
         <p className="text-sm tracking-[0.14em] text-slate-400 uppercase">
-          Quantitative Data Scientist & ML Engineer
+          Data Science Undergraduate & ML Engineer
         </p>
 
         <h1 className="max-w-4xl text-4xl leading-tight font-semibold tracking-tight text-slate-50 sm:text-6xl">
@@ -62,10 +62,9 @@ function Hero() {
         </h1>
 
         <p className="max-w-3xl text-base leading-relaxed text-slate-300 sm:text-lg">
-          Data Science undergraduate specializing in complex systems, quantitative modeling, and ML engineering. From
-          designing GPU-efficient training pipelines to building cloud-deployed stochastic risk engines, I focus on
-          turning advanced mathematics-like heavy-tailed market simulations and Graph Neural Networks-into robust,
-          production-ready architectures.
+          Data Science undergraduate with hands-on experience in ML systems, backend engineering, and deployed AI
+          applications. Built GPU-optimized pipelines, real-time vision systems, and cloud-based simulation platforms,
+          focusing on scalable, production-ready ML solutions.
         </p>
 
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -104,6 +103,7 @@ function Hero() {
           <a href="mailto:IT24101566@my.sliit.lk" className="inline-flex items-center gap-2 transition hover:text-cyan-300">
             <AtSign size={17} /> IT24101566@my.sliit.lk
           </a>
+          <span className="inline-flex items-center gap-2 text-slate-400">+94 70 465 5150</span>
         </div>
       </motion.div>
     </section>
