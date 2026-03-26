@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import GlobalMathBackground from './components/GlobalMathBackground'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 import Projects from './components/Projects'
@@ -17,13 +18,16 @@ function App() {
   }, [viewMode])
 
   return (
-    <main className="min-h-screen bg-[#05070c] text-slate-100">
-      <Navbar viewMode={viewMode} onViewModeChange={setViewMode} />
-      <Hero viewMode={viewMode} />
-      <Skills />
-      <ResearchLab viewMode={viewMode} />
-      <Projects viewMode={viewMode} />
-      <Timeline />
+    <main className="relative min-h-screen bg-[#05070c] text-slate-100">
+      <GlobalMathBackground />
+      <div className="relative z-10">
+        <Navbar viewMode={viewMode} onViewModeChange={setViewMode} />
+        <Hero viewMode={viewMode} />
+        <Skills />
+        <ResearchLab viewMode={viewMode} />
+        <Projects viewMode={viewMode} />
+        <Timeline />
+      </div>
     </main>
   )
 }

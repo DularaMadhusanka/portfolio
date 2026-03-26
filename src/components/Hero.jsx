@@ -31,18 +31,21 @@ function Hero({ viewMode }) {
     <section id="home" className="relative overflow-hidden border-b border-cyan-500/15 px-6 pb-20 pt-24 sm:px-10 lg:px-16">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(14,165,233,0.22),transparent_44%),radial-gradient(circle_at_88%_14%,rgba(59,130,246,0.20),transparent_38%),radial-gradient(circle_at_50%_86%,rgba(8,145,178,0.16),transparent_45%)]" />
-        {viewMode === 'research' &&
-          mathFragments.map((fragment) => (
-            <motion.span
-              key={fragment.text}
-              className="absolute font-mono text-[10px] text-cyan-200/20"
-              style={{ top: fragment.top, left: fragment.left }}
-              animate={{ opacity: [0.1, 0.28, 0.1], y: [0, -2, 0] }}
-              transition={{ duration: 7, repeat: Infinity, delay: fragment.delay, ease: 'easeInOut' }}
-            >
-              {fragment.text}
-            </motion.span>
-          ))}
+        {mathFragments.map((fragment) => (
+          <motion.span
+            key={fragment.text}
+            className={`absolute rounded px-1 font-mono text-[11px] ${
+              viewMode === 'research'
+                ? 'text-cyan-100/45 shadow-[0_0_22px_rgba(34,211,238,0.25)]'
+                : 'text-cyan-100/28 shadow-[0_0_14px_rgba(34,211,238,0.16)]'
+            }`}
+            style={{ top: fragment.top, left: fragment.left }}
+            animate={viewMode === 'research' ? { opacity: [0.35, 0.62, 0.35], y: [0, -3, 0] } : { opacity: [0.2, 0.35, 0.2], y: [0, -2, 0] }}
+            transition={{ duration: 7, repeat: Infinity, delay: fragment.delay, ease: 'easeInOut' }}
+          >
+            {fragment.text}
+          </motion.span>
+        ))}
         <svg className="absolute right-4 bottom-4 h-44 w-80 opacity-35 md:right-10 md:bottom-10" viewBox="0 0 320 170" fill="none">
           <path d="M10 150H308" stroke="#334155" strokeDasharray="4 6" />
           <path d="M10 120H308" stroke="#334155" strokeDasharray="4 6" />
@@ -158,7 +161,9 @@ function Hero({ viewMode }) {
               Download Resume <Download size={16} />
             </a>
           </div>
-          <p className="text-xs text-slate-400">Resume last updated: Mar 2026</p>
+          <p className="w-fit rounded border border-cyan-500/30 bg-slate-900/70 px-2.5 py-1 text-xs text-cyan-200">
+            Resume last updated: Mar 2026
+          </p>
 
           <div className="flex flex-wrap items-center gap-5 pt-2 text-slate-300">
             <a
