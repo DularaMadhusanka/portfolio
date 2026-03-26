@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#05070C"/>
+  <circle cx="170" cy="110" r="220" fill="url(#g1)" fill-opacity="0.28"/>
+  <circle cx="1090" cy="80" r="240" fill="url(#g2)" fill-opacity="0.25"/>
+  <path d="M80 420C300 340 380 440 560 360C800 250 900 400 1120 330" stroke="#22D3EE" stroke-opacity="0.5" stroke-width="2"/>
+  <path d="M120 210C260 260 360 130 520 210C700 290 840 200 1080 250" stroke="#3B82F6" stroke-opacity="0.5" stroke-width="2"/>
+  <text x="86" y="290" fill="#E2E8F0" font-size="62" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">Dulara Madusanka</text>
+  <text x="86" y="348" fill="#67E8F9" font-size="32" font-family="Inter,Segoe UI,Arial,sans-serif">Quantitative Data Scientist &amp; ML Engineer</text>
+  <text x="86" y="402" fill="#94A3B8" font-size="24" font-family="Inter,Segoe UI,Arial,sans-serif">Monte Carlo Risk Systems • GNNs • ML Pipelines</text>
+  <defs>
+    <radialGradient id="g1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(170 110) rotate(90) scale(220)">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1090 80) rotate(90) scale(240)">
+      <stop stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#3B82F6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>
