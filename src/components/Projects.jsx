@@ -31,6 +31,34 @@ const projects = [
       'Designed a retrieval-augmented booking assistant that combines semantic search and LLM generation for grounded, domain-specific hotel recommendations.',
   },
   {
+    title: 'Exploring Global COVID-19 Trends',
+    stack: ['Python', 'Pandas', 'Matplotlib', 'EDA'],
+    highlights: [
+      'Ingested and normalized multi-country case and mortality series for longitudinal analysis',
+      'Built reproducible cleaning and aggregation workflows with Pandas',
+      'Visualized infection and fatality dynamics to compare regions and peak behavior',
+      'Communicated findings through clear, narrative-driven charts for stakeholder review',
+    ],
+    description:
+      'End-to-end exploratory analysis of real-world COVID-19 data: rigorous cleaning, time-series visualization, and interpretation of cross-country case and death-rate patterns.',
+    link: 'https://github.com/DularaMadhusanka/covid19-data-science-project',
+    linkLabel: 'GitHub',
+    period: 'May 2025 – Jun 2025',
+  },
+  {
+    title: 'Sales Performance Dashboard (Tableau)',
+    stack: ['Tableau', 'BI', 'Calculated fields', 'Sales analytics'],
+    highlights: [
+      'Interactive filters for year, segment, and product category',
+      'Regional comparison of sales volume versus profit margin',
+      'Ranked top 15 customers by profitability for account prioritization',
+      'West region led with a 14.9% profit margin—surfaced as a benchmark for scalable playbooks',
+    ],
+    description:
+      'Executive-style Tableau dashboard on regional sales: isolates profit trends, high-value customers, and growth levers through calculated fields and drillable views.',
+    assetNote: 'Interactive workbook — shareable link available on request.',
+  },
+  {
     title: 'Real-Time ASL Recognition System',
     stack: ['TensorFlow', 'MobileNetV2', 'Computer vision'],
     highlights: ['MobileNetV2 architecture', 'TensorFlow pipeline', '85% classification accuracy'],
@@ -68,7 +96,8 @@ function Projects({ viewMode }) {
           Selected Projects
         </h2>
         <p className="mb-8 max-w-2xl text-sm leading-relaxed text-slate-400 sm:text-base">
-          Production-oriented builds spanning risk simulation, training pipelines, retrieval systems, and real-time vision.
+          Production ML and analytics work: simulation, deep learning, retrieval systems, BI dashboards, and large-scale
+          exploratory analysis.
         </p>
         <motion.div
           className="grid gap-5 md:grid-cols-6"
@@ -91,8 +120,13 @@ function Projects({ viewMode }) {
             >
               <div className="mb-3 flex flex-wrap items-center gap-2">
                 <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/35 bg-cyan-500/10 px-2.5 py-1 text-xs text-cyan-200">
-                  <Sparkles size={13} aria-hidden /> {project.featured || idx === 0 ? 'Featured' : 'Production focus'}
+                  <Sparkles size={13} aria-hidden /> {project.featured || idx === 0 ? 'Featured' : 'Case study'}
                 </span>
+                {project.period && (
+                  <span className="rounded-md border border-slate-600/80 bg-slate-950/40 px-2 py-0.5 font-mono text-[11px] text-slate-500">
+                    {project.period}
+                  </span>
+                )}
                 {project.stack?.map((tag) => (
                   <span
                     key={tag}
@@ -114,15 +148,17 @@ function Projects({ viewMode }) {
                   </li>
                 ))}
               </ul>
-              {project.link && (
+              {project.link ? (
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 font-medium text-cyan-300 transition hover:text-cyan-200"
                 >
-                  Live app <ArrowUpRight size={15} aria-hidden />
+                  {project.linkLabel ?? 'Live app'} <ArrowUpRight size={15} aria-hidden />
                 </a>
+              ) : (
+                project.assetNote && <p className="text-xs text-slate-500">{project.assetNote}</p>
               )}
             </motion.article>
           ))}

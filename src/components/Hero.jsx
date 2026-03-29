@@ -133,7 +133,7 @@ function Hero({ viewMode }) {
           </div>
 
           <p className="text-sm tracking-[0.14em] text-slate-400 uppercase">
-            Data Science Undergraduate & ML Engineer
+            ML Engineer & Data Scientist
           </p>
 
           <h1 id="hero-heading" className="max-w-4xl text-4xl leading-tight font-semibold tracking-tight text-slate-50 sm:text-6xl">
@@ -145,9 +145,9 @@ function Hero({ viewMode }) {
           </h1>
 
           <p className="max-w-3xl text-base leading-relaxed text-slate-300 sm:text-lg">
-            Data Science undergraduate with hands-on experience in ML systems, backend engineering, and deployed AI
-            applications. Built GPU-optimized pipelines, real-time vision systems, and cloud-based simulation
-            platforms, focusing on scalable, production-ready ML solutions.
+            ML engineer with end-to-end experience across research-grade models, backend systems, and shipped AI
+            products. Delivers GPU-optimized training stacks, retrieval and vision systems, and cloud simulation
+            platforms—with a focus on reliability, metrics, and production readiness.
           </p>
 
           {viewMode === 'research' ? (
@@ -170,7 +170,8 @@ function Hero({ viewMode }) {
           ) : (
             <div className="rounded-xl border border-slate-700/70 bg-slate-900/60 p-4">
               <p className="text-sm text-slate-300">
-                Undergraduate researcher with strong depth in probability, optimization, and production ML systems.
+                ML research and engineering depth in probability, optimization, graph-based models, and production ML
+                systems.
               </p>
             </div>
           )}
@@ -239,9 +240,9 @@ function Hero({ viewMode }) {
             </>
           ) : (
             <ul className="space-y-2 text-sm text-slate-300">
-              <li>- Research assistant at SLIIT (GNN + curriculum learning)</li>
-              <li>- Built deployed Monte Carlo VaR/CVaR risk engine</li>
-              <li>- Production ML focus: GPU pipelines, FastAPI, RAG systems</li>
+              <li>- ML research assistant at SLIIT (GNNs, curriculum learning)</li>
+              <li>- Shipped Monte Carlo VaR/CVaR risk engine (deployed)</li>
+              <li>- Stack: GPU training pipelines, FastAPI, RAG, analytics (Python, Tableau)</li>
             </ul>
           )}
         </aside>

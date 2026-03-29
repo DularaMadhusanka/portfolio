@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion'
-import { BrainCircuit, Code2, Cpu, Sigma } from 'lucide-react'
+import { BarChart3, BrainCircuit, Code2, Cpu, Sigma } from 'lucide-react'
 
 const skillGroups = [
   {
@@ -11,6 +11,11 @@ const skillGroups = [
     title: 'ML & Deep Learning',
     icon: BrainCircuit,
     skills: ['PyTorch', 'TensorFlow', 'CNNs', 'GNNs', 'Curriculum learning', 'RAG'],
+  },
+  {
+    title: 'Data & Analytics',
+    icon: BarChart3,
+    skills: ['Pandas', 'Matplotlib', 'Tableau', 'EDA', 'Data cleaning', 'Visualization'],
   },
   {
     title: 'Mathematics & Quant',
@@ -46,7 +51,7 @@ function Skills() {
             <span className="h-2.5 w-2.5 rounded-full bg-green-400/80" />
             <span className="ml-3 text-xs tracking-[0.22em] text-slate-400 uppercase">skills-terminal.log</span>
           </div>
-          <div className="grid gap-6 p-5 sm:grid-cols-2">
+          <div className="grid gap-6 p-5 sm:grid-cols-2 lg:grid-cols-3">
             {skillGroups.map((group) => (
               <div key={group.title} className="rounded-xl border border-slate-700/80 bg-slate-950/55 p-4">
                 <p className="mb-3 inline-flex items-center gap-2 font-mono text-sm text-cyan-300">

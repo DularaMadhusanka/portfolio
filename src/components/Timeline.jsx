@@ -5,11 +5,11 @@ const timelineItems = [
   {
     type: 'experience',
     icon: BriefcaseBusiness,
-    title: 'Undergraduate Research Assistant - AI Systems Research',
+    title: 'Machine Learning Research Assistant — AI Systems',
     subtitle: 'SLIIT',
     period: 'Nov 2025 - Present',
     description:
-      'Built GNN training pipelines for spatio-temporal modeling, designed curriculum learning strategies, and improved GPU utilization with reproducible ML workflows.',
+      'Develops GNN training pipelines for spatio-temporal modeling, designs curriculum-learning strategies, and raises GPU utilization through reproducible experiment workflows and rigorous evaluation.',
   },
   {
     type: 'experience',
@@ -27,7 +27,7 @@ const timelineItems = [
     subtitle: 'SLIIT',
     period: '2024 - 2028 · GPA: 3.6 / 4.0',
     description:
-      'Undergraduate program focused on machine learning, quantitative modeling, backend systems, and production-oriented AI engineering.',
+      'Coursework and projects spanning machine learning, quantitative modeling, backend systems, and production-grade AI engineering.',
   },
 ]
 
