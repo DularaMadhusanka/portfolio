@@ -132,9 +132,12 @@ function Hero({ viewMode }) {
             Quant Terminal x AI Startup
           </div>
 
-          <p className="text-sm tracking-[0.14em] text-slate-400 uppercase">
-            ML Engineer & Data Scientist
-          </p>
+          <div className="flex flex-col gap-1.5">
+            <p className="text-sm tracking-[0.14em] text-slate-400 uppercase">
+              ML Research · Data Science & Analytics
+            </p>
+            <p className="text-sm text-slate-500">BSc (Hons) Data Science · SLIIT</p>
+          </div>
 
           <h1 id="hero-heading" className="max-w-4xl text-4xl leading-tight font-semibold tracking-tight text-slate-50 sm:text-6xl">
             Dulara Madusanka builds{' '}
@@ -145,9 +148,9 @@ function Hero({ viewMode }) {
           </h1>
 
           <p className="max-w-3xl text-base leading-relaxed text-slate-300 sm:text-lg">
-            ML engineer with end-to-end experience across research-grade models, backend systems, and shipped AI
-            products. Delivers GPU-optimized training stacks, retrieval and vision systems, and cloud simulation
-            platforms—with a focus on reliability, metrics, and production readiness.
+            Research-focused builder with hands-on work across GNN and curriculum-learning research, backend systems, and
+            shipped AI demos. Ships GPU-aware training stacks, retrieval and vision systems, and cloud simulation
+            tooling—with emphasis on reproducibility, evaluation, and clear metrics.
           </p>
 
           {viewMode === 'research' ? (
