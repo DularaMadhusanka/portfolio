@@ -14,9 +14,13 @@ const researchPillars = [
     notes: ['Heavy-tailed distributions', 'VaR / CVaR estimation', 'Bayesian uncertainty perspective'],
   },
   {
-    title: 'Graph Neural Research',
+    title: 'GNN & Curriculum Learning',
     icon: Network,
-    notes: ['Spatio-temporal message passing', 'Node embedding stability', 'Reproducible GNN pipelines'],
+    notes: [
+      'Brain-inspired graphs for human behavior prediction',
+      'Curriculum schedules for spatio-temporal dependencies',
+      'Progressive PyTorch training, ablations, and SOTA benchmarks',
+    ],
   },
 ]
 

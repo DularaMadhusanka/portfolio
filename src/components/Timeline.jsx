@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion'
-import { BriefcaseBusiness, GraduationCap } from 'lucide-react'
+import { BriefcaseBusiness, GraduationCap, Presentation } from 'lucide-react'
 
 const timelineItems = [
   {
@@ -9,7 +9,16 @@ const timelineItems = [
     subtitle: 'SLIIT',
     period: 'Nov 2025 - Present',
     description:
-      'Develops GNN training pipelines for spatio-temporal modeling, designs curriculum-learning strategies, and raises GPU utilization through reproducible experiment workflows and rigorous evaluation.',
+      'Develops a brain-inspired Graph Neural Network framework for human behavior prediction, using curriculum learning to optimize modeling of complex spatio-temporal dependencies. Designs progressive PyTorch training protocols to improve data efficiency, runs rigorous ablation studies, and benchmarks against strong baselines. Drives reproducible codebase maintenance, research dissemination, and academic workshop organization.',
+  },
+  {
+    type: 'tutorial',
+    icon: Presentation,
+    title: 'Tutorial Resource Person — ICARC 2026',
+    subtitle: '6th ICARC (IEEE co–sponsored) · Faculty of Computing, Sabaragamuwa University',
+    period: 'Feb 2026 · Online',
+    description:
+      'Co-delivered the half-day tutorial “Curriculum Learning: An Efficient Learning Paradigm” (Tutorial 03), including the graph-learning segment on curriculum strategies for GNNs and spatio-temporal tasks. Covered theoretical foundations, pacing and scoring, hands-on practice, and tooling—aligned with the conference theme on responsible AGI and advanced computing research.',
   },
   {
     type: 'experience',

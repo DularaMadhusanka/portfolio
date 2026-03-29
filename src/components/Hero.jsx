@@ -240,9 +240,9 @@ function Hero({ viewMode }) {
             </>
           ) : (
             <ul className="space-y-2 text-sm text-slate-300">
-              <li>- ML research assistant at SLIIT (GNNs, curriculum learning)</li>
-              <li>- Shipped Monte Carlo VaR/CVaR risk engine (deployed)</li>
-              <li>- Stack: GPU training pipelines, FastAPI, RAG, analytics (Python, Tableau)</li>
+              <li>- ML research at SLIIT: brain-inspired GNNs, curriculum learning, behavior modeling</li>
+              <li>- ICARC 2026 tutorial resource person (curriculum learning & graph track)</li>
+              <li>- Shipped Monte Carlo VaR/CVaR engine; stack: PyTorch, FastAPI, RAG, analytics (Python, Tableau)</li>
             </ul>
           )}
         </aside>
