@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import { useState } from 'react'
 import { Network, Sigma, SquareFunction } from 'lucide-react'
 
@@ -70,6 +70,7 @@ const theoremCards = [
 ]
 
 function ResearchLab({ viewMode }) {
+  const reduceMotion = useReducedMotion()
   const [activePoint, setActivePoint] = useState({ x: 160, y: 60 })
 
   const glowByNode = (x, y) => {
@@ -80,15 +81,17 @@ function ResearchLab({ viewMode }) {
   }
 
   return (
-    <section id="research" className="px-6 py-20 sm:px-10 lg:px-16">
+    <section id="research" aria-labelledby="research-heading" className="px-6 py-20 sm:px-10 lg:px-16">
       <motion.div
         className="mx-auto max-w-6xl"
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={reduceMotion ? false : { opacity: 0, y: 24 }}
+        whileInView={reduceMotion ? false : { opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.65 }}
+        transition={{ duration: reduceMotion ? 0 : 0.65 }}
       >
-        <h2 className="mb-8 text-2xl font-semibold text-slate-100 sm:text-3xl">Math & GNN Research Lab</h2>
+        <h2 id="research-heading" className="mb-8 text-2xl font-semibold text-slate-100 sm:text-3xl">
+          Math & GNN Research Lab
+        </h2>
         <div className="grid gap-5 lg:grid-cols-[1.15fr_0.85fr]">
           <article className="rounded-2xl border border-slate-700/70 bg-slate-900/60 p-5 shadow-[0_22px_70px_-55px_rgba(34,211,238,0.8)]">
             <p className="mb-4 font-mono text-xs tracking-[0.16em] text-cyan-300 uppercase">research vectors</p>
@@ -175,8 +178,16 @@ function ResearchLab({ viewMode }) {
                     cy={node.y}
                     r="4"
                     fill="#22d3ee"
-                    animate={{ opacity: [0.4, glowByNode(node.x, node.y), 0.5] }}
-                    transition={{ duration: 3 + idx * 0.1, repeat: Infinity }}
+                    animate={
+                      reduceMotion
+                        ? { opacity: glowByNode(node.x, node.y) }
+                        : { opacity: [0.4, glowByNode(node.x, node.y), 0.5] }
+                    }
+                    transition={
+                      reduceMotion
+                        ? { duration: 0 }
+                        : { duration: 3 + idx * 0.1, repeat: Infinity }
+                    }
                   />
                 ))}
               </svg>

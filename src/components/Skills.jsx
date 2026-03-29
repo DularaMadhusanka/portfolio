@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import { BrainCircuit, Code2, Cpu, Sigma } from 'lucide-react'
 
 const skillGroups = [
@@ -25,16 +25,20 @@ const skillGroups = [
 ]
 
 function Skills() {
+  const reduceMotion = useReducedMotion()
+
   return (
-    <section id="skills" className="px-6 py-20 sm:px-10 lg:px-16">
+    <section id="skills" aria-labelledby="skills-heading" className="px-6 py-20 sm:px-10 lg:px-16">
       <motion.div
         className="mx-auto max-w-6xl"
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={reduceMotion ? false : { opacity: 0, y: 24 }}
+        whileInView={reduceMotion ? false : { opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.65 }}
+        transition={{ duration: reduceMotion ? 0 : 0.65 }}
       >
-        <h2 className="mb-8 text-2xl font-semibold text-slate-100 sm:text-3xl">Core Skills</h2>
+        <h2 id="skills-heading" className="mb-8 text-2xl font-semibold text-slate-100 sm:text-3xl">
+          Core Skills
+        </h2>
         <div className="overflow-hidden rounded-2xl border border-cyan-400/20 bg-slate-900/65 shadow-[0_16px_90px_-45px_rgba(34,211,238,0.6)] backdrop-blur">
           <div className="flex items-center gap-2 border-b border-slate-700 px-4 py-3">
             <span className="h-2.5 w-2.5 rounded-full bg-red-400/80" />

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import { BriefcaseBusiness, GraduationCap } from 'lucide-react'
 
 const timelineItems = [
@@ -32,16 +32,20 @@ const timelineItems = [
 ]
 
 function Timeline() {
+  const reduceMotion = useReducedMotion()
+
   return (
-    <section id="experience" className="px-6 py-20 sm:px-10 lg:px-16">
+    <section id="experience" aria-labelledby="timeline-heading" className="px-6 py-20 sm:px-10 lg:px-16">
       <motion.div
         className="mx-auto max-w-6xl"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={reduceMotion ? false : { opacity: 0, y: 20 }}
+        whileInView={reduceMotion ? false : { opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.65 }}
+        transition={{ duration: reduceMotion ? 0 : 0.65 }}
       >
-        <h2 className="mb-9 text-2xl font-semibold text-slate-100 sm:text-3xl">Experience & Education</h2>
+        <h2 id="timeline-heading" className="mb-9 text-2xl font-semibold text-slate-100 sm:text-3xl">
+          Experience & Education
+        </h2>
         <div className="relative pl-8">
           <span className="absolute top-2 bottom-2 left-2 w-px bg-gradient-to-b from-cyan-300/90 via-blue-400/70 to-transparent" />
           <div className="space-y-8">

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 
 const globalEquations = [
   { text: 'nabla_theta L(theta)', top: '8%', left: '6%', delay: 0.2 },
@@ -11,8 +11,10 @@ const globalEquations = [
 ]
 
 function GlobalMathBackground() {
+  const reduceMotion = useReducedMotion()
+
   return (
-    <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+    <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden="true">
       <div className="absolute inset-0 bg-[linear-gradient(rgba(34,211,238,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.04)_1px,transparent_1px)] bg-[size:80px_80px]" />
       <svg className="absolute inset-0 h-full w-full opacity-25" viewBox="0 0 1600 1000" fill="none">
         <path d="M0 180C240 120 360 280 560 210C840 110 980 260 1260 180C1400 140 1500 110 1600 130" stroke="#0ea5e9" strokeOpacity="0.4" strokeWidth="2" />
@@ -24,8 +26,16 @@ function GlobalMathBackground() {
           key={equation.text}
           className="absolute rounded px-1 font-mono text-[11px] text-cyan-100/30 shadow-[0_0_16px_rgba(34,211,238,0.16)]"
           style={{ top: equation.top, left: equation.left }}
-          animate={{ opacity: [0.18, 0.42, 0.18], y: [0, -3, 0] }}
-          transition={{ duration: 9, repeat: Infinity, delay: equation.delay, ease: 'easeInOut' }}
+          animate={
+            reduceMotion
+              ? { opacity: 0.28, y: 0 }
+              : { opacity: [0.18, 0.42, 0.18], y: [0, -3, 0] }
+          }
+          transition={
+            reduceMotion
+              ? { duration: 0 }
+              : { duration: 9, repeat: Infinity, delay: equation.delay, ease: 'easeInOut' }
+          }
         >
           {equation.text}
         </motion.span>

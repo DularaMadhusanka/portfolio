@@ -23,7 +23,8 @@ export default defineConfig([
       },
     },
     rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      // framer-motion `motion` is used as <motion.div />; no-unused-vars does not always count that
+      'no-unused-vars': ['error', { varsIgnorePattern: '^(motion$|[A-Z_])' }],
     },
   },
 ])
