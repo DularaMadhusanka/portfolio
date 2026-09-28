@@ -59,7 +59,7 @@ function Hero({ viewMode }) {
             {fragment.text}
           </motion.span>
         ))}
-        <svg className="absolute right-4 bottom-4 h-44 w-80 opacity-35 md:right-10 md:bottom-10" viewBox="0 0 320 170" fill="none" aria-hidden="true">
+        <svg className="absolute right-2 bottom-4 h-36 w-[min(20rem,calc(100vw-1rem))] opacity-35 sm:right-4 sm:h-44 md:right-10 md:bottom-10" viewBox="0 0 320 170" fill="none" aria-hidden="true">
           <path d="M10 150H308" stroke="#334155" strokeDasharray="4 6" />
           <path d="M10 120H308" stroke="#334155" strokeDasharray="4 6" />
           <motion.path
@@ -121,13 +121,13 @@ function Hero({ viewMode }) {
       </div>
 
       <motion.div
-        className="relative z-10 mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.2fr_0.8fr]"
+        className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-start lg:gap-10"
         initial={reduceMotion ? false : { opacity: 0, y: 18 }}
         whileInView={reduceMotion ? false : { opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: reduceMotion ? 0 : 0.7 }}
       >
-        <div className="flex flex-col gap-8">
+        <div className="flex min-w-0 w-full flex-col gap-8">
           <div className="inline-flex w-fit items-center gap-2 rounded-full border border-cyan-400/30 bg-slate-900/65 px-3 py-1 text-xs tracking-[0.18em] text-cyan-300 uppercase backdrop-blur">
             Quant Terminal x AI Startup
           </div>
@@ -136,7 +136,7 @@ function Hero({ viewMode }) {
             <p className="text-sm tracking-[0.14em] text-slate-400 uppercase">
               ML Research · Data Science & Analytics
             </p>
-            <p className="text-sm text-slate-500">BSc (Hons) Data Science · SLIIT</p>
+            <p className="text-sm text-slate-500">BSc (Hons) IT — Data Science · SLIIT</p>
           </div>
 
           <h1 id="hero-heading" className="max-w-4xl text-4xl leading-tight font-semibold tracking-tight text-slate-50 sm:text-6xl">
@@ -148,9 +148,10 @@ function Hero({ viewMode }) {
           </h1>
 
           <p className="max-w-3xl text-base leading-relaxed text-slate-300 sm:text-lg">
-            Research-focused builder with hands-on work across GNN and curriculum-learning research, backend systems, and
-            shipped AI demos. Ships GPU-aware training stacks, retrieval and vision systems, and cloud simulation
-            tooling—with emphasis on reproducibility, evaluation, and clear metrics.
+            Data Science undergraduate and AI Research Assistant specializing in curriculum learning, graph neural
+            networks, deep learning experimentation, and statistical analysis. Builds reproducible PyTorch pipelines,
+            evaluates models under low-resource conditions, and communicates technical work through publications and
+            conference workshops.
           </p>
 
           {viewMode === 'research' ? (
@@ -195,7 +196,7 @@ function Hero({ viewMode }) {
             </a>
           </div>
           <p className="w-fit rounded border border-cyan-500/30 bg-slate-900/70 px-2.5 py-1 text-xs text-cyan-200">
-            Resume last updated: Mar 2026
+            Resume last updated: Sep 2026
           </p>
 
           <div className="flex flex-wrap items-center gap-5 pt-2 text-slate-300">
@@ -215,14 +216,17 @@ function Hero({ viewMode }) {
             >
               <ExternalLink size={17} aria-hidden /> LinkedIn
             </a>
-            <a href="mailto:IT24101566@my.sliit.lk" className="inline-flex items-center gap-2 transition hover:text-cyan-300">
-              <AtSign size={17} /> IT24101566@my.sliit.lk
+            <a             href="mailto:dularamadusanka690@gmail.com" className="inline-flex items-center gap-2 transition hover:text-cyan-300">
+              <AtSign size={17} /> dularamadusanka690@gmail.com
             </a>
-            <span className="inline-flex items-center gap-2 text-slate-400">+94 70 465 5150</span>
+            <span className="inline-flex items-center gap-2 text-slate-400">+94 77 594 0401</span>
           </div>
         </div>
 
-        <aside className="rounded-2xl border border-cyan-400/20 bg-slate-950/65 p-5 shadow-[0_20px_90px_-50px_rgba(59,130,246,0.8)]" aria-label="Quant signal summary">
+        <aside
+          className="min-w-0 w-full rounded-2xl border border-cyan-400/20 bg-slate-950/65 p-5 shadow-[0_20px_90px_-50px_rgba(59,130,246,0.8)] lg:self-stretch"
+          aria-label="Quant signal summary"
+        >
           <p className="mb-4 font-mono text-xs tracking-[0.18em] text-cyan-300 uppercase">quant signal monitor</p>
           {viewMode === 'research' ? (
             <>
@@ -244,6 +248,7 @@ function Hero({ viewMode }) {
           ) : (
             <ul className="space-y-2 text-sm text-slate-300">
               <li>- ML research at SLIIT: brain-inspired GNNs, curriculum learning, behavior modeling</li>
+              <li>- MERCon 2026 workshop speaker: curriculum learning for training deep neural networks</li>
               <li>- ICARC 2026 tutorial resource person (curriculum learning & graph track)</li>
               <li>- Shipped Monte Carlo VaR/CVaR engine; stack: PyTorch, FastAPI, RAG, analytics (Python, Tableau)</li>
             </ul>

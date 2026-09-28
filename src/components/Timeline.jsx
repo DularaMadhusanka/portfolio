@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion'
-import { BriefcaseBusiness, GraduationCap, Presentation } from 'lucide-react'
+import { ArrowUpRight, BriefcaseBusiness, GraduationCap, Presentation } from 'lucide-react'
 
 const timelineItems = [
   {
@@ -21,6 +21,15 @@ const timelineItems = [
       'Co-delivered the half-day tutorial “Curriculum Learning: An Efficient Learning Paradigm” (Tutorial 03), including the graph-learning segment on curriculum strategies for GNNs and spatio-temporal tasks. Covered theoretical foundations, pacing and scoring, hands-on practice, and tooling—aligned with the conference theme on responsible AGI and advanced computing research.',
   },
   {
+    type: 'speaking',
+    icon: Presentation,
+    title: 'Workshop Speaker — Does Order Matter? Curriculum Learning for Training Deep Neural Networks',
+    subtitle: 'Moratuwa Engineering Research Conference (MERCon 2026)',
+    period: '2026',
+    description:
+      'Presented curriculum-learning concepts for GNN training, including graph difficulty estimation and the effects of easy-to-hard and hard-to-easy training order.',
+  },
+  {
     type: 'experience',
     icon: BriefcaseBusiness,
     title: 'Independent Mathematics Instructor',
@@ -28,6 +37,37 @@ const timelineItems = [
     period: 'Mar 2025 - Present',
     description:
       'Taught probability and discrete mathematics to 900+ students, strengthening algorithmic thinking and quantitative problem-solving foundations.',
+  },
+  {
+    type: 'publication',
+    icon: Presentation,
+    title: 'First Author — Tag Entropy: A Structure-Agnostic Curriculum Learning Framework for GNNs',
+    subtitle: 'MERCon 2026 · Published in IEEE Xplore',
+    period: '2026',
+    description:
+      'Proposed an architecture- and structure-agnostic graph difficulty measure using normalized Shannon entropy for curriculum learning with graph neural networks.',
+    link: 'https://ieeexplore.ieee.org/document/11691316',
+    linkLabel: 'Read on IEEE Xplore',
+  },
+  {
+    type: 'publication',
+    icon: Presentation,
+    title: 'First Author — Beyond Easy-to-Hard: Investigating Tag-Entropy-Based Training Order in GNNs',
+    subtitle: 'IJCAI-ECAI 2026 GlobalSouthAI Workshop · Accepted',
+    period: '2026',
+    description:
+      'Investigated easy-to-hard and hard-to-easy curriculum orderings across multiple GNN architectures and graph-classification datasets.',
+  },
+  {
+    type: 'publication',
+    icon: Presentation,
+    title: 'Co-Author — Confusion-Aware Transfer Teacher Curriculum Learning Framework',
+    subtitle: 'Global South ML Workshop at ICML 2026 · Seoul, South Korea',
+    period: 'Jul 2026',
+    description:
+      'Co-authored a deep learning optimization framework that disentangles curriculum scoring, pacing, and feature-separation effects. Preprint: arXiv:2606.17706.',
+    link: 'https://arxiv.org/abs/2606.17706',
+    linkLabel: 'Read on arXiv',
   },
   {
     type: 'education',
@@ -65,11 +105,34 @@ function Timeline() {
                   <item.icon size={14} />
                   {item.type}
                 </p>
-                <h3 className="text-lg font-semibold text-slate-100">{item.title}</h3>
+                <h3 className="text-lg font-semibold text-slate-100">
+                  {item.link ? (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition hover:text-cyan-200"
+                    >
+                      {item.title}
+                    </a>
+                  ) : (
+                    item.title
+                  )}
+                </h3>
                 <p className="mt-1 text-sm text-slate-300">
                   {item.subtitle} · {item.period}
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-slate-300">{item.description}</p>
+                {item.link && (
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-cyan-300 transition hover:text-cyan-200"
+                  >
+                    {item.linkLabel} <ArrowUpRight size={15} aria-hidden />
+                  </a>
+                )}
               </article>
             ))}
           </div>

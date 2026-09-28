@@ -114,7 +114,7 @@ function Navbar({ viewMode, onViewModeChange }) {
       {mobileOpen && (
         <div
           id="mobile-nav"
-          className="fixed inset-0 top-[52px] z-40 flex flex-col border-t border-cyan-500/10 bg-[#060912]/95 px-4 py-4 backdrop-blur-lg lg:hidden"
+          className="fixed inset-x-0 bottom-0 top-[57px] z-40 flex flex-col overflow-y-auto border-t border-cyan-500/10 bg-[#060912]/95 px-4 py-4 backdrop-blur-lg lg:hidden"
           role="dialog"
           aria-modal="true"
           aria-label="Section navigation"

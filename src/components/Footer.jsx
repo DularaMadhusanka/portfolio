@@ -30,7 +30,7 @@ function Footer() {
           >
             LinkedIn
           </a>
-          <a href="mailto:IT24101566@my.sliit.lk" className="text-slate-400 transition hover:text-cyan-300">
+          <a href="mailto:dularamadusanka690@gmail.com" className="text-slate-400 transition hover:text-cyan-300">
             Email
           </a>
         </nav>

@@ -15,7 +15,7 @@ const skillGroups = [
   {
     title: 'Data & Analytics',
     icon: BarChart3,
-    skills: ['Pandas', 'Matplotlib', 'Tableau', 'EDA', 'Data cleaning', 'Visualization'],
+    skills: ['Pandas', 'Matplotlib', 'Power BI', 'DuckDB', 'DAX', 'EDA', 'Hypothesis testing'],
   },
   {
     title: 'Mathematics & Quant',
@@ -25,7 +25,7 @@ const skillGroups = [
   {
     title: 'Languages & Tools',
     icon: Code2,
-    skills: ['Python', 'SQL', 'Java', 'Git', 'Linux', 'Docker (basic)', 'MongoDB'],
+    skills: ['Python', 'SQL', 'Java', 'Bash', 'R', 'Git', 'Linux (Fedora)', 'Docker', 'MongoDB'],
   },
 ]
 

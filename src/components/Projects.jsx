@@ -31,6 +31,28 @@ const projects = [
       'Designed a retrieval-augmented booking assistant that combines semantic search and LLM generation for grounded, domain-specific hotel recommendations.',
   },
   {
+    title: 'Conditional Diffusion Model for Controlled Image Generation',
+    stack: ['PyTorch', 'Diffusion', 'Classifier-free guidance'],
+    highlights: [
+      'Conditional image generation architecture',
+      'Adjustable class-conditioned sampling',
+      'Checkpoint and weight-initialization safeguards',
+    ],
+    description:
+      'Built and validated a conditional diffusion pipeline with controllable sampling and defensive inference checks.',
+  },
+  {
+    title: 'RFM Customer Segmentation & Lifetime Value Analytics',
+    stack: ['Python', 'DuckDB', 'Power BI', 'DAX'],
+    highlights: [
+      'End-to-end customer analytics pipeline',
+      'Kruskal-Wallis, Chi-square, and Gini-index validation',
+      'Interactive customer-value dashboard',
+    ],
+    description:
+      'Combined statistical testing, SQL analytics, and interactive BI to validate customer segments and prioritize lifetime value.',
+  },
+  {
     title: 'Exploring Global COVID-19 Trends',
     stack: ['Python', 'Pandas', 'Matplotlib', 'EDA'],
     highlights: [
@@ -64,6 +86,17 @@ const projects = [
     highlights: ['MobileNetV2 architecture', 'TensorFlow pipeline', '85% classification accuracy'],
     description:
       'Developed and optimized a real-time vision inference system for American Sign Language recognition with stable interactive performance.',
+  },
+  {
+    title: 'Jarvis Offline Voice-Controlled Assistant',
+    stack: ['Python', 'Llama 3.2', 'Ollama', 'Linux'],
+    highlights: [
+      'Fully local speech-recognition pipeline',
+      'Low-latency offline interaction',
+      'Linux application and process automation',
+    ],
+    description:
+      'Built a private, offline assistant with local language-model inference, voice control, and system-level automation.',
   },
 ]
 
@@ -138,13 +171,13 @@ function Projects({ viewMode }) {
               </div>
               <h3 className="mb-2 text-lg font-semibold text-slate-100">{project.title}</h3>
               <p className="mb-4 text-sm leading-relaxed text-slate-300">{project.description}</p>
-              <ul className="mb-4 space-y-2 text-sm text-slate-300">
+              <ul className="mb-4 min-w-0 space-y-2 text-sm text-slate-300">
                 {(viewMode === 'recruiter' ? project.highlights.slice(0, 2) : project.highlights).map((h) => (
                   <li key={h} className="flex gap-2">
                     <span className="text-cyan-500/80" aria-hidden>
                       ·
                     </span>
-                    <span>{h}</span>
+                    <span className="min-w-0 break-words">{h}</span>
                   </li>
                 ))}
               </ul>
